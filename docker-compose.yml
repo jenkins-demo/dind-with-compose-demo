@@ -13,14 +13,8 @@ services:
        MYSQL_USER: wordpress
        MYSQL_PASSWORD: wordpress
        # try reserving more resources than CJE will allow
-     deploy:
-       resources:
-         limits:
-           cpus: '2'
-           memory: 200M
-         reservations:
-           cpus: '2'
-           memory: 200M
+     mem_reservation: 200M
+     mem_limit: 200M
 
    wordpress:
      depends_on:
