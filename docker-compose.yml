@@ -1,5 +1,6 @@
 # simple example taken from the official docker-compose catalog https://docs.docker.com/compose/wordpress/#define-the-project
-version: '3.3'
+# do not use version 3 to allow setting limits in non swarm mode: https://github.com/docker/compose/issues/4513
+version: '2.1'
 
 services:
    db:
